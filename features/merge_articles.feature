@@ -3,8 +3,6 @@ Feature: Merge Articles
   In order to prevent similar articles to flood a blog
   I want to merge articles
 
-  Scenario: A non-administrator cannot merge articles
-
   Scenario: Merged article should contain text of both previous articles
 
   Scenario: Merged article should have one author
