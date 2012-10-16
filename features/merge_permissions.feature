@@ -7,9 +7,9 @@ Feature: User Permissions
     Given the blog is set up
     And I am not logged in as a admin
     And the following articles exist:
-    | title | author | body        | published | id |
-    | first | dennis | Lorem Ipsum | t         | 1  |
-    | second| eric   | Muspi Merol | u         | 2  |
+      | title | author | content     | published | id |
+      | first | dennis | Lorem Ipsum | t         | 1  |
+      | second| eric | Muspi Merol   | u         | 2  |
   
   Scenario: A non-administrator cannot merge articles
     Given I am on the all articles page
