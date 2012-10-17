@@ -14,5 +14,6 @@ Feature: User Permissions
   Scenario: A non-administrator cannot merge articles
     Given I am on the new article page
     When I follow "All Articles"
-    Then I should see "Hello World!"
+    Then I should see "first"
+    And I follow "first"
     And I should not see "Merge"

@@ -10,6 +10,12 @@ Given /^the blog is set up with a non-admin$/ do
                 :state => 'active'})
 end
 
+Given /^the following articles exist:$/ do |table|
+  table.hashes.each do |article|
+  	Article.create!(article)
+  end
+end
+
 And /^I am logged into the non-admin panel$/ do
   visit '/accounts/login'
   fill_in 'user_login', :with => 'publisher'
@@ -19,11 +25,5 @@ And /^I am logged into the non-admin panel$/ do
     page.should have_content('Login successful')
   else
     assert page.has_content?('Login successful')
-  end
-end
-
-Given /^the following articles exist:$/ do |table|
-  table.hashes.each do |article|
-  	Content.create!(article)
   end
 end
