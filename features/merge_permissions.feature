@@ -7,7 +7,7 @@ Feature: User Permissions
     Given the blog is set up with a non-admin
     And I am logged into the non-admin panel
     And the following articles exist:
-    | title | author | body     | published | id |
+    | title | author | body        | published | id |
     | first | dennis | Lorem Ipsum | t         | 1  |
     | second| eric | Muspi Merol   | u         | 2  |
   
